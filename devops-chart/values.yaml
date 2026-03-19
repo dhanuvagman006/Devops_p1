@@ -1,6 +1,7 @@
 app:
   name: devops-app
-  image: devops-app:latest
+  image: dhanuvagman123/mydevp1:v1.0
+  imagePullPolicy: Always
   replicas: 2
   port: 3000
   nodePort: 30007
