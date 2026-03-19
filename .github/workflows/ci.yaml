@@ -2,7 +2,7 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/devops-app:latest .
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/devops-app:v1.0 .
 
     - name: Push Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-app:latest 
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-app:v1.0 
