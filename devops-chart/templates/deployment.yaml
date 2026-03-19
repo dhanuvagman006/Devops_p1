@@ -15,7 +15,7 @@ spec:
       containers:
       - name: {{ .Values.app.name }}
         image: {{ .Values.app.image }}
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: {{ .Values.app.port }}
 
